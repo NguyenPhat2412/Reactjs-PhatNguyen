@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import MyComponent from "./components/learn/MyComponent";
 
 const content = [
   ["Nguyen Xuan Phat"],
@@ -17,6 +18,7 @@ export default function App() {
         <div>
           <h1>React js</h1>
           <p>i.e.., using the React library for rendering the UI</p>
+          <MyComponent />
         </div>
       </header>
       <div id="tabs">
@@ -33,6 +35,7 @@ export default function App() {
           >
             Dien thoai
           </button>
+
           <button
             className={activeContentIndex === 2 ? "active" : ""}
             onClick={() => setActiveContentIndex(2)}
@@ -50,7 +53,7 @@ export default function App() {
           <ul>
             {content[activeContentIndex].map((item) => (
               <li key={item}>{item}</li>
-            ))}
+            ))}{" "}
           </ul>
         </div>
       </div>
