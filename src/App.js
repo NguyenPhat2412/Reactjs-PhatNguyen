@@ -19,6 +19,7 @@ export default function App() {
           <h1>React js</h1>
           <p>i.e.., using the React library for rendering the UI</p>
           <MyComponent />
+          <div>{console.log("Lmao")}</div>
         </div>
       </header>
       <div id="tabs">
