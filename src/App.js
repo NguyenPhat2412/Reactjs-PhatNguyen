@@ -1,63 +1,21 @@
-import { useState } from "react";
-import "./App.css";
-import MyComponent from "./components/learn/MyComponent";
-
-const content = [
-  ["Nguyen Xuan Phat"],
-  ["Dien thoai: 0983549821"],
-  ["Email: 23110209@st.vju.ac.vn"],
-  ["Facebook: https://www.facebook.com/phatnx.2310/"],
-];
-
-export default function App() {
-  const [activeContentIndex, setActiveContentIndex] = useState(0);
+import "./components/todo/todo.css";
+import TodoList from "./components/todo/todo-list";
+import TodoItem from "./components/todo/todo-input";
+import TodoImg from "./components/todo/todo-img";
+const App = () => {
+  const hoidanit = "Phat";
+  const age = 18;
+  const data = {
+    address: "Hanoi",
+    country: "VietNam",
+  };
   return (
-    <div>
-      <header>
-        <img src="./logo192.png" alt="React logo" />
-        <div>
-          <h1>React js</h1>
-          <p>i.e.., using the React library for rendering the UI</p>
-          <MyComponent />
-          <div>{console.log("Lmao")}</div>
-        </div>
-      </header>
-      <div id="tabs">
-        <menu>
-          <button
-            className={activeContentIndex === 0 ? "active" : ""}
-            onClick={() => setActiveContentIndex(0)}
-          >
-            Name
-          </button>
-          <button
-            className={activeContentIndex === 1 ? "active" : ""}
-            onClick={() => setActiveContentIndex(1)}
-          >
-            Dien thoai
-          </button>
-
-          <button
-            className={activeContentIndex === 2 ? "active" : ""}
-            onClick={() => setActiveContentIndex(2)}
-          >
-            Email
-          </button>
-          <button
-            className={activeContentIndex === 3 ? "active" : ""}
-            onClick={() => setActiveContentIndex(3)}
-          >
-            Link facebook
-          </button>
-        </menu>
-        <div id="tab-content">
-          <ul>
-            {content[activeContentIndex].map((item) => (
-              <li key={item}>{item}</li>
-            ))}{" "}
-          </ul>
-        </div>
-      </div>
+    <div className="todo-container ">
+      <div className="todo-title">Todo List</div>
+      <TodoItem />
+      <TodoList name={hoidanit} age={age} data={data} />
+      <TodoImg />
     </div>
   );
-}
+};
+export default App;

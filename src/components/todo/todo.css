@@ -1,0 +1,30 @@
+.todo-container {
+  font-size: 20px;
+  justify-items: center;
+  margin-top: 40px;
+}
+.todo-title {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.todo-list {
+  border: 1px solid #000;
+  margin-top: 20px;
+  padding: 20px 40px 20px 40px;
+  gap: 15px;
+}
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: Logo infinite 20s linear;
+}
+@keyframes Logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
