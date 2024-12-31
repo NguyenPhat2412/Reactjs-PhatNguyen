@@ -24,7 +24,6 @@ const TodoItem = (props) => {
       <button style={{ cursor: "pointer" }} onClick={handleClick}>
         Add
       </button>
-      <div>My text is = {valueInput}</div>
     </div>
   );
 };
