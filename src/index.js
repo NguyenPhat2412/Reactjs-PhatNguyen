@@ -3,6 +3,8 @@ import App from "./App";
 import ReactDOM from "react-dom/client";
 import React from "react";
 import TodoApp from "./components/todo/todo-app";
+import UserPage from "./pages/users";
+
 // const rootElement = document.getElementById("root");
 // const root = createRoot(rootElement);
 const router = createBrowserRouter([
@@ -17,7 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/users",
-        element: <div>users Page</div>,
+        element: (
+          <div>
+            <UserPage />
+          </div>
+        ),
       },
       {
         path: "/products",
